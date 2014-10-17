@@ -1,0 +1,3 @@
+@mixin bg-img($path, $type, $repeat: no-repeat, $p1: 0px, $p2: 0px) {
+    background: url("#{$imagedir}/#{$path}.#{$type}") $repeat $p1 $p2;
+}

@@ -1,0 +1,49 @@
+@import "compass/css3";
+
+*{
+	@include box-sizing(border-box);
+}
+
+html,
+body{
+	height: 100%;
+}
+
+body{
+	font-family: $base-font-type;
+	font-size: $base-font-size;
+	color: $base-font-color;
+	-webkit-font-smoothing:antialiased;
+}
+
+.container{
+	@extend %block-center;
+	@include clearfix();
+	@include padding(0 20px);
+
+	height: 50px;
+	background:red;
+
+	@include screen(mobile-l){
+		@include padding(0 30px);
+	}
+
+	@include screen(desktop){
+		width: 1110px;
+		@include padding(0);
+	}
+
+}
+
+.one-column{
+	width: auto;
+}
+
+.two-column{
+	width: auto;
+
+	@include screen(tablet-l){ 
+		float: left;
+		width: 50%;
+	}
+}

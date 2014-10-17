@@ -1,0 +1,39 @@
+@mixin text-divider( $side ) { 
+    position: relative;
+    &:after,
+    &:before{
+        @include margin(10px);
+        background: $hr-color;
+        content: '';
+        height: 1px;
+        position: absolute;
+        z-index: 9;
+        
+    }
+
+    @if $side == right {
+        &:after{
+            width: 100%;
+        }
+    }
+
+    @if $side == left {
+        &:before{
+            width: 100%;
+            right: 100%;
+        }
+    }
+
+    @if $side == both {
+        &:before{
+            width: 100%;
+            right: 100%;
+        }
+        &:after{
+            width: 200%;
+        }
+    }
+}
+
+
+

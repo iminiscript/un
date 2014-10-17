@@ -1,0 +1,6 @@
+@mixin vertical-align {
+	@extend %block-level;
+	@include translateY(-50%);
+    position: relative;
+    top: 50%;
+}

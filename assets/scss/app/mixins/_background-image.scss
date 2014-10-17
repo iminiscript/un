@@ -1,0 +1,5 @@
+@mixin bg-img-only($path, $type, $repeat: no-repeat, $p1: 0px, $p2: 0px) {
+    background-image: url("#{$imagedir}/#{$path}.#{$type}");
+    background-repeat: $repeat;
+    background-position: $p1 $p2;
+}

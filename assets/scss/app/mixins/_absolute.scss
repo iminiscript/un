@@ -1,0 +1,16 @@
+@mixin absolute($pos: absolute, $pleft: 0px, $pright:0px, $ptop: 0px, $pbottom: 0px) {
+    position: $pos;
+    left: $pleft;
+    right: $pright;
+    top: $ptop;
+}
+
+@mixin absolute-valing($pos: absolute, $pleft: 50%, $ptop: 50%, $width: auto, $height: auto) {
+    width: $width;
+    height: $height;
+    position: $pos;
+    left: $pleft;
+    top: $ptop;
+    margin-left: -($width / 2);
+    margin-top: -($height / 2);
+}
